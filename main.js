@@ -42,12 +42,22 @@ var redPoint = 0, greenPoint = 0;
         // $(this).attr('active', 'vero');
         console.log("punteggio rosso: " + redPoint);
         $('.prossa').html("punteggio rosso: " + redPoint);
+        // messaggio di sconfitta
+        if (redPoint == 3) {
+          setTimeout(function(){ alert("HAI PERSO"); }, 100);
+        }
+
       } else {
         $(this).css('background', 'green');
         greenPoint++;
         $(this).addClass('active');
         console.log("punteggio verde: " + greenPoint);
         $('.pverde').html("punteggio verde: " + greenPoint);
+        // messaggio di vittoria
+        if (greenPoint == 49) {
+          setTimeout(function(){ alert("HAI VINTO"); }, 100);
+          
+        }
       }
     }
   );
@@ -68,10 +78,11 @@ var redPoint = 0, greenPoint = 0;
  }
 // il for attraversa larray e con eq(test) assegno  a 15 square scelti randomicamente
 // in base ai numeri generati la classe redWannabe
- for (var j = 0; j < arrayNumRandom.length; j++) {
+ for (var j = 0; j <= 15; j++) {
    var test = arrayNumRandom[j];
    $(".square").eq(test).addClass("redWannabe");
  }
+
 
 
 });
