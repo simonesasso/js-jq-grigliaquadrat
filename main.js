@@ -4,6 +4,12 @@
 
 $(document).ready(function(){
 
+  // genero gli elementi html
+  for (var y = 0; y < 64; y++) {
+    var prevContent = $(".tablecontainer").html();
+    $(".tablecontainer").html(prevContent + "<div class='square'></div>");
+  }
+
   // tenere il punteggio dei Verdi VS Rossi
 var redPoint = 0, greenPoint = 0;
 
