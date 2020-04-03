@@ -45,7 +45,9 @@ var redPoint = 0, greenPoint = 0;
         // messaggio di sconfitta
         if (redPoint == 3) {
           setTimeout(function(){ alert("HAI PERSO"); }, 100);
+          setTimeout(function(){ location.reload(); }, 200);
         }
+
 
       } else {
         $(this).css('background', 'green');
@@ -56,7 +58,7 @@ var redPoint = 0, greenPoint = 0;
         // messaggio di vittoria
         if (greenPoint == 49) {
           setTimeout(function(){ alert("HAI VINTO"); }, 100);
-          
+          setTimeout(function(){ location.reload(); }, 200);
         }
       }
     }
